@@ -1,0 +1,5 @@
+%transition-link {
+  transition-property: color;
+  transition-duration: var(--hover-focus-duration);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
