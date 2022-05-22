@@ -1,6 +1,7 @@
 .advatages__icon-cont {
   height: 120px;
   margin-bottom: var(--standart-gap);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,14 +10,13 @@
   border-radius: 4px;
 }
 .advatages__title {
-  margin: 0;
   margin-bottom: 10px;
   font-size: inherit;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 }
 .advatages__text {
-  margin: 0;
   line-height: 1.71;
   color: var(--second-color);
 }

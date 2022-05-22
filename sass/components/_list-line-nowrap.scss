@@ -1,7 +1,0 @@
-.list-line-nowrap {
-  display: flex;
-  justify-content: center;
-}
-.list-line-nowrap__item + .list-line-nowrap__item {
-  margin-left: var(--standart-gap);
-}

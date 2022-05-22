@@ -1,0 +1,21 @@
+.standart-list {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+.standart-list__item {
+  &:not(:last-child) {
+    @include before-tablet {
+      margin-bottom: 30px;
+    }
+  }
+  @include tablet {
+    flex-basis: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+  @include desktop {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}

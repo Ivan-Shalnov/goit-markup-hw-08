@@ -1,12 +1,20 @@
+.callback-form {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  overflow-y: auto;
+  background: var(--background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
 .callback-form__title {
-  margin: 0;
   margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-
   color: var(--first-color);
 }
 .callback-form__label {
@@ -73,11 +81,16 @@
   display: block;
   margin-bottom: 30px;
 
-  text-align: center;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
 
   color: var(--second-color);
+  @include desktop {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .callback-form__checkbox-icon-wrap {
   display: inline-flex;

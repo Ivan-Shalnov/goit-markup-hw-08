@@ -1,11 +1,20 @@
 .filter-list {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  @include tablet {
+    justify-content: center;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 .filter-list__btn {
   display: inline-block;
   padding: 6px 22px;
+  margin-bottom: 15px;
   border: 1px solid transparent;
   border-radius: 4px;
   font-family: inherit;
@@ -39,21 +48,30 @@
 }
 
 .projects-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--standart-gap));
-  margin-left: calc(-1 * var(--standart-gap));
+  margin: -15px;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .projects-list__item {
-  flex-basis: 370px;
-  margin-top: var(--standart-gap);
-  margin-left: var(--standart-gap);
+  margin: 15px;
+  @include tablet {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  @include desktop {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 .projects-list__link {
   display: block;
   transition: box-shadow var(--hover-focus-duration)
     cubic-bezier(0.4, 0, 0.2, 1);
-
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -68,8 +86,8 @@
 .projects-list__img-text {
   position: absolute;
   top: 100%;
-  margin: 0;
-  padding: 63px 24px;
+  display: flex;
+  padding: 77px 24px;
   width: 100%;
   height: 100%;
 
@@ -85,20 +103,23 @@
   .projects-list__link:hover &,
   .projects-list__link:focus & {
     transform: translateY(-100%);
+    @include tablet {
+      padding: 49px 24px;
+    }
+    @include desktop {
+      padding: 63px 24px;
+    }
   }
 }
 
 .projects-list__desc-cont {
-  padding-top: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 20px;
+  padding: 20px 24px;
+  flex-grow: 1;
 
   border: 1px solid #eeeeee;
   border-top: 0;
 }
 .projects-list__title {
-  margin: 0;
   margin-bottom: 4px;
 
   font-weight: 700;
@@ -106,9 +127,8 @@
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.projects-list__desc {
-  margin: 0;
 
+.projects-list__desc {
   font-size: 16px;
   line-height: 1.87;
   color: var(--second-color);

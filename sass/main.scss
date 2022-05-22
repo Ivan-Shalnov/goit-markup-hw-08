@@ -1,6 +1,7 @@
-@import './utils/placeholders';
-@import './base/reset';
 @import './utils/variables';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './base/reset';
 @import './utils/visually-hidden';
 @import './base/common';
 @import './components/container';
@@ -9,7 +10,7 @@
 @import './components/logo';
 @import './components/buttons';
 @import './components/social-list';
-@import './components/list-line-nowrap';
+@import './components/standart-list';
 
 @import './components/header';
 @import './components/hero';
