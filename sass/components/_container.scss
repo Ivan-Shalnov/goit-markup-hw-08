@@ -2,13 +2,14 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  width: 100%;
   @include mobile {
-    width: $breakpoint-mobil;
+    max-width: $breakpoint-mobil;
   }
   @include tablet {
-    width: $breakpoint-tablet;
+    max-width: $breakpoint-tablet;
   }
   @include desktop {
-    width: $breakpoint-desktop;
+    max-width: $breakpoint-desktop;
   }
 }
