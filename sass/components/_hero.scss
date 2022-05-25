@@ -11,7 +11,7 @@
   background-size: cover;
   background-position: center;
 
-  @media (min-device-pixel-ratio: 2),
+  @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: linear-gradient(
@@ -20,7 +20,7 @@
       ),
       url(../images/hero-bg-960.jpg);
   }
-  @include tablet {
+  @media screen and (min-width: ($breakpoint-mobil + 1px)) {
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -36,7 +36,7 @@
         url(../images/hero-bg-1536.jpg);
     }
   }
-  @include desktop {
+  @media screen and (min-width: ($breakpoint-tablet + 1px)) {
     max-width: 1600px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
