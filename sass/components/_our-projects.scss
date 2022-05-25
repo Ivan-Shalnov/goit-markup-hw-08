@@ -48,15 +48,21 @@
 }
 
 .projects-list {
-  margin: -15px;
   @include tablet {
+    margin: -15px;
     display: flex;
     flex-wrap: wrap;
   }
 }
+
 .projects-list__item {
-  margin: 15px;
+  &:not(:last-child) {
+    @include before-tablet {
+      margin-bottom: 30px;
+    }
+  }
   @include tablet {
+    margin: 15px;
     flex-basis: calc(100% / 2 - 30px);
   }
   @include desktop {
@@ -87,7 +93,9 @@
   position: absolute;
   top: 100%;
   display: flex;
-  padding: 77px 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
   width: 100%;
   height: 100%;
 
@@ -100,15 +108,12 @@
   background: rgba(33, 150, 243, 0.9);
 
   transition: transform var(--hover-focus-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  @include before-mobile {
+    font-size: calc(14px + (4 + 4 * 0.7) * ((100vw - 320px) / 480));
+  }
   .projects-list__link:hover &,
   .projects-list__link:focus & {
     transform: translateY(-100%);
-    @include tablet {
-      padding: 49px 24px;
-    }
-    @include desktop {
-      padding: 63px 24px;
-    }
   }
 }
 

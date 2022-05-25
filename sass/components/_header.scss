@@ -189,6 +189,9 @@
     line-height: 1.17;
     color: var(--accent-color);
   }
+  @include before-mobile {
+    font-size: calc(30px + (4 + 4 * 0.7) * ((100vw - 320px) / 480));
+  }
 }
 .header__social-list {
   display: flex;
@@ -211,4 +214,7 @@
 
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  @include before-mobile {
+    font-size: calc(12px + (6 + 6 * 0.7) * ((100vw - 320px) / 480));
+  }
 }

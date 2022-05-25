@@ -14,7 +14,9 @@
   font-size: inherit;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
+  @include before-tablet {
+    text-align: center;
+  }
 }
 .advatages__text {
   line-height: 1.71;

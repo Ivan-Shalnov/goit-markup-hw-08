@@ -455,6 +455,11 @@ body.modal-open {
     color: var(--accent-color);
   }
 }
+@media screen and (max-width: 479px) {
+  .header__contact-link--big {
+    font-size: calc(30px + 6.8 * (100vw - 320px) / 480);
+  }
+}
 
 .header__social-list {
   display: flex;
@@ -482,9 +487,13 @@ body.modal-open {
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
+@media screen and (max-width: 479px) {
+  .header__social-link {
+    font-size: calc(12px + 10.2 * (100vw - 320px) / 480);
+  }
+}
 
 .hero {
-  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--hero-footer-back);
@@ -500,7 +509,6 @@ body.modal-open {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-768.jpg);
   }
 }
@@ -573,7 +581,11 @@ body.modal-open {
   font-size: inherit;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .advatages__title {
+    text-align: center;
+  }
 }
 
 .advatages__text {
@@ -583,6 +595,7 @@ body.modal-open {
 
 .what-we-do {
   display: none;
+  padding-top: 0;
 }
 @media screen and (min-width: 1200px) {
   .what-we-do {
@@ -693,6 +706,7 @@ body.modal-open {
 }
 
 .footer {
+  padding: 60px 0;
   background: var(--hero-footer-back);
 }
 @media screen and (max-width: 1199px) {
@@ -723,6 +737,11 @@ body.modal-open {
 @media screen and (max-width: 1199px) {
   .footer__addres-container {
     margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__addres-container {
+    flex-shrink: 0;
   }
 }
 
@@ -787,18 +806,27 @@ body.modal-open {
   color: none;
 }
 
-.footer__subscribe-container {
-  width: 100%;
-}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__subscribe-container {
     margin-left: auto;
     margin-right: auto;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer__subscribe-container {
+    flex-grow: 1;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__subscribe-container {
     margin-left: 93px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__subscribe-form {
+    display: flex;
+    flex-wrap: nowrap;
   }
 }
 
@@ -824,12 +852,13 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .footer__email-input {
-    width: 358px;
+    max-width: 358px;
   }
 }
 
 .footer__subscribe-btn {
-  padding: 10px 28px 10px 29px;
+  width: 100%;
+  max-width: 200px;
 }
 @media screen and (min-width: 1200px) {
   .footer__subscribe-btn {
@@ -1072,21 +1101,22 @@ body.modal-open {
   margin-right: 8px;
 }
 
-.projects-list {
-  margin: -15px;
-}
 @media screen and (min-width: 768px) {
   .projects-list {
+    margin: -15px;
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-.projects-list__item {
-  margin: 15px;
+@media screen and (max-width: 767px) {
+  .projects-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .projects-list__item {
+    margin: 15px;
     flex-basis: calc(50% - 30px);
   }
 }
@@ -1120,7 +1150,9 @@ body.modal-open {
   position: absolute;
   top: 100%;
   display: flex;
-  padding: 77px 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
   width: 100%;
   height: 100%;
   font-weight: 400;
@@ -1130,18 +1162,13 @@ body.modal-open {
   background: rgba(33, 150, 243, 0.9);
   transition: transform var(--hover-focus-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 479px) {
+  .projects-list__img-text {
+    font-size: calc(14px + 6.8 * (100vw - 320px) / 480);
+  }
+}
 .projects-list__link:hover .projects-list__img-text, .projects-list__link:focus .projects-list__img-text {
   transform: translateY(-100%);
-}
-@media screen and (min-width: 768px) {
-  .projects-list__link:hover .projects-list__img-text, .projects-list__link:focus .projects-list__img-text {
-    padding: 49px 24px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .projects-list__link:hover .projects-list__img-text, .projects-list__link:focus .projects-list__img-text {
-    padding: 63px 24px;
-  }
 }
 
 .projects-list__desc-cont {
